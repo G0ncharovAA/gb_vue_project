@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Задание по Vue</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <button @click="reverseText">{{ buttonText }}</button>
+      <ul>
+        <li
+          v-for="(item, index) in itemList"
+          :key="index"
+          @click="removeItem(index)"
+        >
+          {{ item }}
+        </li>
+      </ul>
+      <button @click="addItem">Добавить</button>
+    </div>
+
+    <script>
+      new Vue({
+        el: "#app",
+        data: {
+          buttonText: "Перевернуть",
+          itemList: [],
+        },
+        methods: {
+          reverseText() {
+            this.buttonText = this.buttonText.split("").reverse().join("");
+          },
+          addItem() {
+            this.itemList.push(
+              `Новый элемент списка индекс ${this.itemList.length + 1}`
+            );
+          },
+          removeItem(index) {
+            this.itemList.splice(index, 1);
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
