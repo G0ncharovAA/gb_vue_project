@@ -10,7 +10,9 @@
       href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Jost&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style1.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="script.js" defer></script>
   </head>
   <body class="flex-default">
     <header class="header center">
@@ -19,9 +21,9 @@
         <p class="logo-title">Interno</p>
       </div>
       <nav class="nav-menu">
-        <a class="menu-item">Home</a>
+        <a href="index.html" class="menu-item">Home</a>
         <a class="menu-item">Project</a>
-        <a class="menu-item">Blog</a>
+        <a href="blog.html" class="menu-item">Blog</a>
       </nav>
     </header>
     <main class="main">
@@ -191,98 +193,46 @@
           of readable content<br />of a page when lookings at its layouts the
           points of using.
         </p>
-        <div class="articles-carousel">
-          <div class="article-card">
+        <div id="app">
+          <div class="articles-carousel">
             <div
-              class="article-img"
-              style="background-image: url('img/article0.png')"
+              class="article-card"
+              v-for="article in articles"
+              :key="article.image"
+              :style="'background-color: ' + article.backgroundColor"
             >
-              <p class="article-label">Kitchan Design</p>
-            </div>
-            <h5 class="article-caption">
-              Let’s Get Solution For Building Construction Work
-            </h5>
-            <div class="article-panel">
-              <p class="article-date">26 December,2022</p>
-              <svg
-                class="article-button"
-                xmlns="http://www.w3.org/2000/svg"
-                width="52"
-                height="53"
-                viewBox="0 0 52 53"
-                fill="none"
+              <div
+                class="article-img"
+                :style="'background-image: url(' + article.image + ')'"
               >
-                <circle cx="26" cy="26.267" r="26" fill="#F4F0EC" />
-                <path
-                  d="M23.7714 32.9527L29.7143 26.267L23.7714 19.5813"
-                  stroke="#292F36"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </div>
-          </div>
-          <div class="article-card" style="background-color: #f4f0ec">
-            <div
-              class="article-img"
-              style="background-image: url('img/article1.png')"
-            >
-              <p class="article-label">Living Design</p>
-            </div>
-            <h5 class="article-caption">
-              Low Cost Latest Invented Interior Designing Ideas.
-            </h5>
-            <div class="article-panel">
-              <p class="article-date">22 December,2022</p>
-              <svg
-                class="article-button"
-                xmlns="http://www.w3.org/2000/svg"
-                width="52"
-                height="53"
-                viewBox="0 0 52 53"
-                fill="none"
-              >
-                <circle cx="26" cy="26.267" r="26" fill="white" />
-                <path
-                  d="M23.7714 32.9527L29.7143 26.267L23.7714 19.5813"
-                  stroke="#292F36"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </div>
-          </div>
-          <div class="article-card">
-            <div
-              class="article-img"
-              style="background-image: url('img/article2.png')"
-            >
-              <p class="article-label">Interior Design</p>
-            </div>
-            <h5 class="article-caption">
-              Best For Any Office & Business Interior Solution
-            </h5>
-            <div class="article-panel">
-              <p class="article-date">25 December,2022</p>
-              <svg
-                class="article-button"
-                xmlns="http://www.w3.org/2000/svg"
-                width="52"
-                height="53"
-                viewBox="0 0 52 53"
-                fill="none"
-              >
-                <circle cx="26" cy="26.267" r="26" fill="#F4F0EC" />
-                <path
-                  d="M23.7714 32.9527L29.7143 26.267L23.7714 19.5813"
-                  stroke="#292F36"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
+                <p class="article-label">{{ article.label }}</p>
+              </div>
+              <h5 class="article-caption">{{ article.caption }}</h5>
+              <div class="article-panel">
+                <p class="article-date">{{ article.date }}</p>
+                <svg
+                  class="article-button"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="52"
+                  height="53"
+                  viewBox="0 0 52 53"
+                  fill="none"
+                >
+                  <circle
+                    cx="26"
+                    cy="26.267"
+                    r="26"
+                    :fill="article.buttonFill"
+                  />
+                  <path
+                    d="M23.7714 32.9527L29.7143 26.267L23.7714 19.5813"
+                    stroke="#292F36"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
             </div>
           </div>
         </div>
@@ -302,9 +252,9 @@
       </div>
       <nav class="footer-column footer-gap">
         <h6 class="footer-nav-title">Pages</h6>
-        <a class="menu-item">Home</a>
+        <a href="index.html" class="menu-item">Home</a>
         <a class="menu-item">Project</a>
-        <a class="menu-item">Blog</a>
+        <a href="blog.html" class="menu-item">Blog</a>
       </nav>
       <div class="footer-column footer-gap">
         <h6 class="footer-contacts-title">Contact</h6>
