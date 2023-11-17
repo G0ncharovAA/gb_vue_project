@@ -290,8 +290,8 @@ a {
 
 .articles-carousel {
   margin-top: 52px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  justify-content: center;
   gap: 27px;
 }
 
