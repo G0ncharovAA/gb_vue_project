@@ -83,7 +83,7 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 .top-banner {
     margin-top: 53px;
     width: 100%;
