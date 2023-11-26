@@ -5,6 +5,7 @@
     <Projects />
     <Promo />
     <Articles />
+    <Homework/>
     <Footer/>
   </div>
 </template>
@@ -16,6 +17,7 @@ import Projects from './components/Projects.vue'
 import Promo from './components/Promo.vue'
 import Articles from './components/Articles.vue'
 import Footer from './components/Footer.vue'
+import Homework from './components/Homework.vue'
 
 export default {
   name: 'App',
@@ -26,6 +28,7 @@ export default {
     Promo,
     Articles,
     Footer,
+    Homework,
   }
 }
 </script>
@@ -101,7 +104,7 @@ a {
   align-items: center;
   margin-top: 40px;
   align-items: flex-start;
-  background-image: url("img/bg_hero.png");
+  background-image: url("assets/img/bg_hero.png");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: local;
@@ -461,7 +464,7 @@ a {
   margin-top: 44px;
   width: 100%;
   height: auto;
-  background-image: url("img2/bg_banner.png");
+  background-image: url("assets/img2/bg_banner.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: local;

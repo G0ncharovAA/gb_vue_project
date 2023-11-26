@@ -7,7 +7,7 @@
         </p>
         <div class="container-projects">
             <div class="project-card">
-                <img src="img/project0.jpg" class="card-img" />
+                <img src="../assets/img/project0.jpg" class="card-img" />
                 <div class="card-panel">
                     <div class="card-text">
                         <h6 class="card-title">Modern Kitchan</h6>
@@ -22,7 +22,7 @@
                 </div>
             </div>
             <div class="project-card">
-                <img src="img/project1.png" class="card-img" />
+                <img src="../assets/img/project1.png" class="card-img" />
                 <div class="card-panel">
                     <div class="card-text">
                         <h6 class="card-title">Modern Kitchan</h6>
@@ -37,7 +37,7 @@
                 </div>
             </div>
             <div class="project-card">
-                <img src="img/project2.png" class="card-img" />
+                <img src="../assets/img/project2.png" class="card-img" />
                 <div class="card-panel">
                     <div class="card-text">
                         <h6 class="card-title">Modern Kitchan</h6>
@@ -52,7 +52,7 @@
                 </div>
             </div>
             <div class="project-card">
-                <img src="img/project3.png" class="card-img" />
+                <img src="../assets/img/project3.png" class="card-img" />
                 <div class="card-panel">
                     <div class="card-text">
                         <h6 class="card-title">Modern Kitchan</h6>

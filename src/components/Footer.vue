@@ -2,14 +2,14 @@
     <footer class="footer center">
         <div class="footer-column">
             <div class="container-logo">
-                <img src="img/logo.svg" alt="logo" class="img-logo" />
+                <img src="../assets/img/logo.svg" alt="logo" class="img-logo" />
                 <p class="logo-title">Interno</p>
             </div>
             <p class="names-caption">
                 It is a long established fact that a reader will be distracted
                 lookings.
             </p>
-            <img class="names-media" src="img/media.png" alt="media" />
+            <img class="names-media" src="../assets/img/media.png" alt="media" />
         </div>
         <nav class="footer-column footer-gap">
             <h6 class="footer-nav-title">Pages</h6>

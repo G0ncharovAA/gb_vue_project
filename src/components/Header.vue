@@ -1,7 +1,7 @@
 <template>
     <header class="header center">
         <div class="container-logo">
-            <img src="img/logo.svg" alt="logo" class="img-logo" />
+            <img src="../assets/img/logo.svg" alt="logo" class="img-logo" />
             <p class="logo-title">Interno</p>
         </div>
         <nav class="nav-menu">
