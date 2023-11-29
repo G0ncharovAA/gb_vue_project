@@ -6,6 +6,7 @@
     <Promo />
     <Articles />
     <Project />
+    <ProjectDetails />
     <Footer />
   </div>
 </template>
@@ -18,6 +19,7 @@ import Promo from './components/Promo.vue'
 import Articles from './components/Articles.vue'
 import Footer from './components/Footer.vue'
 import Project from './components/Project.vue'
+import ProjectDetails from './components/ProjectDetails.vue'
 
 export default {
   name: 'App',
@@ -29,6 +31,7 @@ export default {
     Articles,
     Footer,
     Project,
+    ProjectDetails
   }
 }
 </script>

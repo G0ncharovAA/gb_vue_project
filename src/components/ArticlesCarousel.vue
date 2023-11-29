@@ -20,35 +20,19 @@
 </template>
   
 <script>
+import { mapState, mapActions } from 'vuex';
+
 export default {
     name: 'ArticlesCarousel',
-    data() {
-        return {
-            articles: [
-                {
-                    image: "img/article0.png",
-                    label: "Kitchan Design",
-                    caption: "Let’s Get Solution For Building Construction Work",
-                    date: "26 December,2022",
-                    buttonFill: "#F4F0EC",
-                },
-                {
-                    image: "img/article1.png",
-                    label: "Living Design",
-                    caption: "Low Cost Latest Invented Interior Designing Ideas.",
-                    date: "22 December,2022",
-                    backgroundColor: "#F4F0EC",
-                    buttonFill: "white",
-                },
-                {
-                    image: "img/article2.png",
-                    label: "Interior Design",
-                    caption: "Best For Any Office & Business Interior Solution",
-                    date: "25 December,2022",
-                    buttonFill: "#F4F0EC",
-                },
-            ],
-        };
+    computed: {
+        ...mapState({
+            articles: state => state.articlesCarousel
+        }),
+        ...mapActions(['fetchArticlesCarousel'])
     },
+    created() {
+        this.$store.commit('setArticlesCarousel',
+            this.fetchArticlesCarousel())
+    }
 };
 </script>

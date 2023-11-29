@@ -52,60 +52,12 @@
 </template>
   
 <script>
+import { mapState, mapActions } from 'vuex';
+
 export default {
-    name: 'ArticlesList',
+    name: 'ProjetcsList',
     data() {
         return {
-            projects: [
-                {
-                    title: "Minimal Bedroom",
-                    imageUrl: "project/card0.png",
-                    favored: true,
-                    tabs: ["Bed Room"],
-                },
-                {
-                    title: "Classic Minimal Bedroom",
-                    imageUrl: "project/card1.png",
-                    favored: false,
-                    tabs: ["Bed Room"],
-                },
-                {
-                    title: "Minimal Bedroom table",
-                    imageUrl: "project/card2.png",
-                    favored: false,
-                    tabs: ["Bed Room"],
-                },
-                {
-                    title: "Modern Medroom",
-                    imageUrl: "project/card3.png",
-                    favored: false,
-                    tabs: ["Bed Room"],
-                },
-                {
-                    title: "Minimal Bedroom",
-                    imageUrl: "project/card4.png",
-                    favored: false,
-                    tabs: ["Bed Room"],
-                },
-                {
-                    title: "Modern Bedroom",
-                    imageUrl: "project/card5.png",
-                    favored: true,
-                    tabs: ["Bed Room"],
-                },
-                {
-                    title: "System Table",
-                    imageUrl: "project/card6.png",
-                    favored: false,
-                    tabs: ["Bed Room"],
-                },
-                {
-                    title: "Modern Bedroom",
-                    imageUrl: "project/card8.png",
-                    favored: false,
-                    tabs: ["Bed Room"],
-                }
-            ],
             tabs: [
                 { name: "Bathroom" },
                 { name: "Bed Room" },
@@ -128,7 +80,15 @@ export default {
                 return this.projects;
             }
         },
+        ...mapState({
+            projects: state => state.projectsList
+        }),
+        ...mapActions(['fetchProjectsList'])
     },
+    created() {
+        this.$store.commit('setProjectsList',
+            this.fetchProjectsList())
+    }
 };
 </script>
 
