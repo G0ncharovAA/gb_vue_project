@@ -5,8 +5,8 @@
     <Projects />
     <Promo />
     <Articles />
-    <Homework/>
-    <Footer/>
+    <Project />
+    <Footer />
   </div>
 </template>
 
@@ -17,7 +17,7 @@ import Projects from './components/Projects.vue'
 import Promo from './components/Promo.vue'
 import Articles from './components/Articles.vue'
 import Footer from './components/Footer.vue'
-import Homework from './components/Homework.vue'
+import Project from './components/Project.vue'
 
 export default {
   name: 'App',
@@ -28,7 +28,7 @@ export default {
     Promo,
     Articles,
     Footer,
-    Homework,
+    Project,
   }
 }
 </script>
@@ -640,4 +640,5 @@ a {
 .current-page {
   background-color: #f4f0ec;
   border: none;
-}</style>
+}
+</style>
