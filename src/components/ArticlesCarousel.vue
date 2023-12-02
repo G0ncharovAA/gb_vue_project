@@ -1,5 +1,5 @@
 <template>
-    <div class="articles-carousel">
+    <div class="articles-carousel center">
         <div class="article-card" v-for="article in articles" :key="article.image"
             :style="'background-color: ' + article.backgroundColor">
             <div class="article-img" :style="'background-image: url(' + article.image + ')'">

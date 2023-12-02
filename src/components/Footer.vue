@@ -13,9 +13,9 @@
         </div>
         <nav class="footer-column footer-gap">
             <h6 class="footer-nav-title">Pages</h6>
-            <a href="index.html" class="menu-item">Home</a>
-            <a class="menu-item">Project</a>
-            <a href="blog.html" class="menu-item">Blog</a>
+            <router-link to="/" class="menu-item">Home</router-link>
+            <router-link to="/project" class="menu-item">Project</router-link>
+            <router-link to="/blog" class="menu-item">Blog</router-link>
         </nav>
         <div class="footer-column footer-gap">
             <h6 class="footer-contacts-title">Contact</h6>

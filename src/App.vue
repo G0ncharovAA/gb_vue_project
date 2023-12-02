@@ -1,37 +1,20 @@
 <template>
   <div id="app">
     <Header />
-    <Hero />
-    <Projects />
-    <Promo />
-    <Articles />
-    <Project />
-    <ProjectDetails />
+    <router-view/>
     <Footer />
   </div>
 </template>
 
 <script>
 import Header from './components/Header.vue'
-import Hero from './components/Hero.vue'
-import Projects from './components/Projects.vue'
-import Promo from './components/Promo.vue'
-import Articles from './components/Articles.vue'
 import Footer from './components/Footer.vue'
-import Project from './components/Project.vue'
-import ProjectDetails from './components/ProjectDetails.vue'
 
 export default {
   name: 'App',
   components: {
     Header,
-    Hero,
-    Projects,
-    Promo,
-    Articles,
     Footer,
-    Project,
-    ProjectDetails
   }
 }
 </script>

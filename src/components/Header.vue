@@ -5,9 +5,9 @@
             <p class="logo-title">Interno</p>
         </div>
         <nav class="nav-menu">
-            <a href="index.html" class="menu-item">Home</a>
-            <a class="menu-item">Project</a>
-            <a href="blog.html" class="menu-item">Blog</a>
+            <router-link to="/" class="menu-item" >Home</router-link>
+            <router-link to="/project" class="menu-item" >Project</router-link>
+            <router-link to="/blog" class="menu-item" >Blog</router-link>
         </nav>
     </header>
 </template>
